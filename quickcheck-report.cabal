@@ -59,7 +59,7 @@ library
   other-extensions:    CPP, QuasiQuotes, TemplateHaskell
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.8 && <4.9, lens >=4.13 && <4.14, template-haskell >=2.10 && <2.11, QuickCheck >=2.8 && <2.9, printf-th
+  build-depends:       base >=4.8 && <5, lens >=4.12 && <4.15, template-haskell >=2.10 && <2.12, QuickCheck >=2.8 && <2.10, printf-th
   
   -- Directories containing source files.
   hs-source-dirs:      .
