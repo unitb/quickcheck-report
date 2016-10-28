@@ -32,7 +32,7 @@ quickCheckWithResult' :: Testable prop
                       -> IO (String,Result)
 quickCheckWithResult' args name prop = do
         r <- quickCheckWithResult args { chatty = False } prop
-        return ([printf|=== %s ===\n%s\n|] (propDesc name) (output r),r)
+        return ([s|=== %s ===\n%s\n|] (propDesc name) (output r),r)
 
 quickCheckResult' :: Testable prop 
                   => PropName 
@@ -120,7 +120,7 @@ test_report tests = do
     (tests $ (>>= inc) . quickCheckWithResult stdArgs {chatty = False})
     x <- readIORef success
     y <- readIORef total
-    putStr $ [printf|success: %d / %d\n[ %s ]\n|]
+    putStr $ [s|success: %d / %d\n[ %s ]\n|]
         x y
         (if x == y then "passed" else "failed")
     return $ x == y
