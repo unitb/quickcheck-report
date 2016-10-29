@@ -200,3 +200,11 @@ script:
       ;;
   esac
   set +ex
+deploy:
+  provider: hackage
+  username: simon.hudon@gmail.com
+  password:
+    secure: Bsxz1He0sc6leBqfYHSV0DrjGO1Vb7wk1l9W5NpIpzvuzXnigvQrAtf9u1ffClKLc1p6yzeQBX/V9x5wtPFdEWaRv/wSSWRLdGHLOm1mNjjPTzcXP4CWFPDk7NlnTHsLYXvqJv8SiMQI7fzHxlpHtdu5j2qPaRKEBHmtJ4MyB+4o5jp9v6agnMxzKDQqGR8dTHON2O6JzCWvKRdsz3aO9rZIDczr6IOcV8IiL+ChoQO5ZjJBKwcJXa91I1FG08cKegUSavztmUDaTfnSwGehh/9ZpwCJ+59lL/a2MAHh7cCiADrTJRDYvHDEMVQCAlWwJfpqCcNY8vx8w3TweCaYuEe3t3Xxqt/1x+mfys9f+zkbJS+Q/ES50b6Cba30DS0xZ6oL1cAQMoLt9u/ODkgb0KxRdtJWq3oCvkI2PH6DKaC0X8pVu1EzvTkg7T1xHDqMFdgZuhx66DRyLR4238BkkLxgmh2ajmOnXMiJJrG2WTRE0xDtx79nNR/Su6LWR1KVj7z9IJ0jvdZ6lCtGv5Jex4TGB2AEvaGB0gid6N3ldod8BxBOuUbMhLB2lKKGbav0sipJlZN7qG1YjZXjQFrIoI6wx0jzSY/DtPnumJMQCrh1KAGVA35HdkbiHk2CY/7Iq+ocDJQXYDqdbyMTv4VjE5JlJPm8VpomcWtA6q6GbyU=
+  on:
+    repo: literate-unitb/quickcheck-report
+    tags: true
